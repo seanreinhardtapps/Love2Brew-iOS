@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		943087581A789E4B00F5A235 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 943087571A789E4B00F5A235 /* main.m */; };
+		9430875B1A789E4C00F5A235 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430875A1A789E4C00F5A235 /* AppDelegate.m */; };
+		9430875E1A789E4C00F5A235 /* Love2Brew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */; };
+		943087641A789E4C00F5A235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943087621A789E4C00F5A235 /* Main.storyboard */; };
+		943087661A789E4C00F5A235 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943087651A789E4C00F5A235 /* Images.xcassets */; };
+		943087691A789E4C00F5A235 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943087671A789E4C00F5A235 /* LaunchScreen.xib */; };
+		943087751A789E4C00F5A235 /* Love2BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 943087741A789E4C00F5A235 /* Love2BrewTests.m */; };
+		943087801A78A22D00F5A235 /* Brewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430877F1A78A22D00F5A235 /* Brewer.m */; };
+		943087831A78AFC400F5A235 /* FrontPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943087821A78AFC400F5A235 /* FrontPageViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9430876F1A789E4C00F5A235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9430874A1A789E4B00F5A235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 943087511A789E4B00F5A235;
+			remoteInfo = Love2Brew;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		943087521A789E4B00F5A235 /* Love2Brew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Love2Brew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		943087561A789E4B00F5A235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943087571A789E4B00F5A235 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		943087591A789E4B00F5A235 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9430875A1A789E4C00F5A235 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9430875D1A789E4C00F5A235 /* Love2Brew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Love2Brew.xcdatamodel; sourceTree = "<group>"; };
+		943087631A789E4C00F5A235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		943087651A789E4C00F5A235 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		943087681A789E4C00F5A235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9430876E1A789E4C00F5A235 /* Love2BrewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Love2BrewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		943087731A789E4C00F5A235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943087741A789E4C00F5A235 /* Love2BrewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Love2BrewTests.m; sourceTree = "<group>"; };
+		9430877E1A78A22D00F5A235 /* Brewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brewer.h; sourceTree = "<group>"; };
+		9430877F1A78A22D00F5A235 /* Brewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brewer.m; sourceTree = "<group>"; };
+		943087811A78AFC400F5A235 /* FrontPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontPageViewController.h; sourceTree = "<group>"; };
+		943087821A78AFC400F5A235 /* FrontPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontPageViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9430874F1A789E4B00F5A235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9430876B1A789E4C00F5A235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		943087491A789E4B00F5A235 = {
+			isa = PBXGroup;
+			children = (
+				943087541A789E4B00F5A235 /* Love2Brew */,
+				943087711A789E4C00F5A235 /* Love2BrewTests */,
+				943087531A789E4B00F5A235 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		943087531A789E4B00F5A235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				943087521A789E4B00F5A235 /* Love2Brew.app */,
+				9430876E1A789E4C00F5A235 /* Love2BrewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		943087541A789E4B00F5A235 /* Love2Brew */ = {
+			isa = PBXGroup;
+			children = (
+				943087591A789E4B00F5A235 /* AppDelegate.h */,
+				9430875A1A789E4C00F5A235 /* AppDelegate.m */,
+				943087621A789E4C00F5A235 /* Main.storyboard */,
+				943087651A789E4C00F5A235 /* Images.xcassets */,
+				943087671A789E4C00F5A235 /* LaunchScreen.xib */,
+				9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */,
+				943087551A789E4B00F5A235 /* Supporting Files */,
+				9430877E1A78A22D00F5A235 /* Brewer.h */,
+				9430877F1A78A22D00F5A235 /* Brewer.m */,
+				943087811A78AFC400F5A235 /* FrontPageViewController.h */,
+				943087821A78AFC400F5A235 /* FrontPageViewController.m */,
+			);
+			path = Love2Brew;
+			sourceTree = "<group>";
+		};
+		943087551A789E4B00F5A235 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				943087561A789E4B00F5A235 /* Info.plist */,
+				943087571A789E4B00F5A235 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		943087711A789E4C00F5A235 /* Love2BrewTests */ = {
+			isa = PBXGroup;
+			children = (
+				943087741A789E4C00F5A235 /* Love2BrewTests.m */,
+				943087721A789E4C00F5A235 /* Supporting Files */,
+			);
+			path = Love2BrewTests;
+			sourceTree = "<group>";
+		};
+		943087721A789E4C00F5A235 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				943087731A789E4C00F5A235 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		943087511A789E4B00F5A235 /* Love2Brew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 943087781A789E4C00F5A235 /* Build configuration list for PBXNativeTarget "Love2Brew" */;
+			buildPhases = (
+				9430874E1A789E4B00F5A235 /* Sources */,
+				9430874F1A789E4B00F5A235 /* Frameworks */,
+				943087501A789E4B00F5A235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Love2Brew;
+			productName = Love2Brew;
+			productReference = 943087521A789E4B00F5A235 /* Love2Brew.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9430876D1A789E4C00F5A235 /* Love2BrewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9430877B1A789E4C00F5A235 /* Build configuration list for PBXNativeTarget "Love2BrewTests" */;
+			buildPhases = (
+				9430876A1A789E4C00F5A235 /* Sources */,
+				9430876B1A789E4C00F5A235 /* Frameworks */,
+				9430876C1A789E4C00F5A235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				943087701A789E4C00F5A235 /* PBXTargetDependency */,
+			);
+			name = Love2BrewTests;
+			productName = Love2BrewTests;
+			productReference = 9430876E1A789E4C00F5A235 /* Love2BrewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9430874A1A789E4B00F5A235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Sean Reinhardt";
+				TargetAttributes = {
+					943087511A789E4B00F5A235 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9430876D1A789E4C00F5A235 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 943087511A789E4B00F5A235;
+					};
+				};
+			};
+			buildConfigurationList = 9430874D1A789E4B00F5A235 /* Build configuration list for PBXProject "Love2Brew" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 943087491A789E4B00F5A235;
+			productRefGroup = 943087531A789E4B00F5A235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				943087511A789E4B00F5A235 /* Love2Brew */,
+				9430876D1A789E4C00F5A235 /* Love2BrewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		943087501A789E4B00F5A235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943087641A789E4C00F5A235 /* Main.storyboard in Resources */,
+				943087691A789E4C00F5A235 /* LaunchScreen.xib in Resources */,
+				943087661A789E4C00F5A235 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9430876C1A789E4C00F5A235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9430874E1A789E4B00F5A235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9430875E1A789E4C00F5A235 /* Love2Brew.xcdatamodeld in Sources */,
+				943087831A78AFC400F5A235 /* FrontPageViewController.m in Sources */,
+				9430875B1A789E4C00F5A235 /* AppDelegate.m in Sources */,
+				943087581A789E4B00F5A235 /* main.m in Sources */,
+				943087801A78A22D00F5A235 /* Brewer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9430876A1A789E4C00F5A235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943087751A789E4C00F5A235 /* Love2BrewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		943087701A789E4C00F5A235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 943087511A789E4B00F5A235 /* Love2Brew */;
+			targetProxy = 9430876F1A789E4C00F5A235 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		943087621A789E4C00F5A235 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				943087631A789E4C00F5A235 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		943087671A789E4C00F5A235 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				943087681A789E4C00F5A235 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		943087761A789E4C00F5A235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		943087771A789E4C00F5A235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		943087791A789E4C00F5A235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Love2Brew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9430877A1A789E4C00F5A235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Love2Brew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9430877C1A789E4C00F5A235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Love2BrewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Love2Brew.app/Love2Brew";
+			};
+			name = Debug;
+		};
+		9430877D1A789E4C00F5A235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Love2BrewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Love2Brew.app/Love2Brew";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9430874D1A789E4B00F5A235 /* Build configuration list for PBXProject "Love2Brew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943087761A789E4C00F5A235 /* Debug */,
+				943087771A789E4C00F5A235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		943087781A789E4C00F5A235 /* Build configuration list for PBXNativeTarget "Love2Brew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943087791A789E4C00F5A235 /* Debug */,
+				9430877A1A789E4C00F5A235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9430877B1A789E4C00F5A235 /* Build configuration list for PBXNativeTarget "Love2BrewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9430877C1A789E4C00F5A235 /* Debug */,
+				9430877D1A789E4C00F5A235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9430875D1A789E4C00F5A235 /* Love2Brew.xcdatamodel */,
+			);
+			currentVersion = 9430875D1A789E4C00F5A235 /* Love2Brew.xcdatamodel */;
+			path = Love2Brew.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9430874A1A789E4B00F5A235 /* Project object */;
+}
