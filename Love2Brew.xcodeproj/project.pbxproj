@@ -20,6 +20,8 @@
 		943276791A79D2740047ADEB /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276781A79D2740047ADEB /* OverviewViewController.m */; };
 		9432767C1A79E9BD0047ADEB /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9432767B1A79E9BD0047ADEB /* HistoryViewController.m */; };
 		9432767F1A79EAB30047ADEB /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9432767E1A79EAB30047ADEB /* StepsViewController.m */; };
+		943276821A79FD280047ADEB /* BrewerDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276811A79FD280047ADEB /* BrewerDataStack.m */; };
+		943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276871A7A04CB0047ADEB /* BrewerEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		9432767B1A79E9BD0047ADEB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		9432767D1A79EAB30047ADEB /* StepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsViewController.h; sourceTree = "<group>"; };
 		9432767E1A79EAB30047ADEB /* StepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsViewController.m; sourceTree = "<group>"; };
+		943276801A79FD280047ADEB /* BrewerDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewerDataStack.h; sourceTree = "<group>"; };
+		943276811A79FD280047ADEB /* BrewerDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerDataStack.m; sourceTree = "<group>"; };
+		943276861A7A04CB0047ADEB /* BrewerEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewerEntity.h; sourceTree = "<group>"; };
+		943276871A7A04CB0047ADEB /* BrewerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +106,14 @@
 			children = (
 				943087591A789E4B00F5A235 /* AppDelegate.h */,
 				9430875A1A789E4C00F5A235 /* AppDelegate.m */,
+				943276801A79FD280047ADEB /* BrewerDataStack.h */,
+				943276811A79FD280047ADEB /* BrewerDataStack.m */,
 				943087621A789E4C00F5A235 /* Main.storyboard */,
 				943087651A789E4C00F5A235 /* Images.xcassets */,
 				943087671A789E4C00F5A235 /* LaunchScreen.xib */,
 				9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */,
+				943276861A7A04CB0047ADEB /* BrewerEntity.h */,
+				943276871A7A04CB0047ADEB /* BrewerEntity.m */,
 				943087551A789E4B00F5A235 /* Supporting Files */,
 				9430877E1A78A22D00F5A235 /* Brewer.h */,
 				9430877F1A78A22D00F5A235 /* Brewer.m */,
@@ -256,6 +266,8 @@
 				943276761A79D22B0047ADEB /* BrewerTabViewController.m in Sources */,
 				943087581A789E4B00F5A235 /* main.m in Sources */,
 				943087801A78A22D00F5A235 /* Brewer.m in Sources */,
+				943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */,
+				943276821A79FD280047ADEB /* BrewerDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,13 +40,13 @@
 -(void) setId:(int)_Id
 {
     Id = _Id;
-    NSString *location = [NSString stringWithFormat: @"http://coffee.sreinhardt.com/Content/images/image%d.png", self.Id];
-    NSLog(location);
-    self.imageLocation = [NSURL URLWithString:location];
+    
 }
 
 -(void) downloadImage
 {
+    NSString *location = [NSString stringWithFormat: @"http://coffee.sreinhardt.com/Content/images/image%d.png", self.Id];
+    self.imageLocation = [NSURL URLWithString:location];
     dispatch_queue_t queue = dispatch_queue_create("com.sreinhardt.SeanReinhardtApps.Love2Brew", NULL);
     dispatch_async(queue, ^{
         NSData *imageData = [NSData dataWithContentsOfURL:self.imageLocation];

@@ -27,7 +27,7 @@
     BrewerTabViewController *tabBar = (BrewerTabViewController *)self.tabBarController;
     self.brewer = tabBar.brewer;
     
-    self.brewerImage.image = self.brewer.brewerImage;
+    self.brewerImage.image = [UIImage imageWithData:self.brewer.imageData];
     self.overviewText.text = self.brewer.overview;
 }
 

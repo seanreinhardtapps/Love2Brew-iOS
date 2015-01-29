@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Brewer.h"
+#import "BrewerEntity.h"
 
 @interface BrewerTabViewController : UITabBarController
 
-@property (strong, nonatomic) Brewer *brewer;
+@property (strong, nonatomic) BrewerEntity *brewer;
 
 @end

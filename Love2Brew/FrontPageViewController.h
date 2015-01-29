@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Brewer.h"
+#import "BrewerEntity.h"
 
-@interface FrontPageViewController : UITableViewController
+@interface FrontPageViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+    @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
     @property (nonatomic, strong) NSMutableArray *coffeeBrewers;
 
-    @property (nonatomic, strong) Brewer *selectedBrewer;
+    @property (nonatomic, strong) BrewerEntity *selectedBrewer;
 
     @property (strong, nonatomic) NSURL *serverURL;
     -(void) downloadBrewers;

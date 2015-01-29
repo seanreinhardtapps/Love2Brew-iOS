@@ -9,6 +9,8 @@
 #import "FrontPageViewController.h"
 #import "Brewer.h"
 #import "BrewerTabViewController.h"
+#import "BrewerEntity.h"
+#import "BrewerDataStack.h"
 
 @interface FrontPageViewController ()
 
@@ -26,10 +28,48 @@
     
      self.serverURL = [NSURL URLWithString:@"http://coffee.sreinhardt.com/api/CoffeeBrewers/"];
 
+    [self.fetchedResultsController performFetch:nil];
+    self.coffeeBrewers = [NSMutableArray arrayWithArray:self.fetchedResultsController.fetchedObjects];
+
+    
+    
     if ([self.coffeeBrewers count] ==0)
     {
         [self downloadBrewers];
     }
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+-(NSFetchedResultsController *)fetchedResultsController
+{
+    //Lazy initialization - only initialize when first needed, not at ViewDidLoad
+    if(_fetchedResultsController !=nil)
+    {
+        return _fetchedResultsController;
+    }
+    
+    BrewerDataStack *coreDataStack = [BrewerDataStack defaultStack];
+    NSFetchRequest *fetchRequest = [self entryListFetchRequest];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+}
+
+- (NSFetchRequest *)entryListFetchRequest
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"BrewerEntity"];
+    
+    //sort list
+    //this is an Array - the array has one element -> a descriptor made by the method call to NSSortDescriptor
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"iD" ascending:YES]];
+    return fetchRequest;
 }
 
 -(void) downloadBrewers
@@ -45,21 +85,31 @@
     //Use NSMutableArray to create array of BlogPost Objects for each coffee brewer deserialized from the stream
     self.coffeeBrewers = [NSMutableArray array];
     
+    //Grab Core Stack
+     BrewerDataStack *coreDataStack = [BrewerDataStack defaultStack];
     
     //for each element in the array, take the data from the dictionary and create a BlogPost object
     for (NSDictionary *jsonObj in dataArray)
     {
-        Brewer *brewer = [Brewer brewerWithName:[jsonObj objectForKey:@"name"]];
-        brewer.Id = [[jsonObj objectForKey:@"id"] integerValue];
-        brewer.temp = [[jsonObj objectForKey:@"temp"] integerValue];
+       
+        //Initialize an entity into the core data
+        BrewerEntity *brewer = [NSEntityDescription insertNewObjectForEntityForName:@"BrewerEntity"  inManagedObjectContext:coreDataStack.managedObjectContext];
+        brewer.name = [jsonObj objectForKey:@"name"];
+        brewer.iD = [jsonObj objectForKey:@"id"];
+        brewer.temp = [jsonObj objectForKey:@"temp"];
         brewer.overview = [jsonObj objectForKey:@"overview"];
         brewer.history = [jsonObj objectForKey:@"history"];
         brewer.steps = [jsonObj objectForKey:@"steps"];
         brewer.howItWorks = [jsonObj objectForKey:@"howItWorks"];
-        brewer.rating = [[jsonObj objectForKey:@"rating"] integerValue];
+        brewer.rating = [jsonObj objectForKey:@"rating"];
         [brewer downloadImage];
         [self.coffeeBrewers addObject:brewer];
+        
+        //SAVE
+        [coreDataStack saveContext];
+        
     }
+    [coreDataStack saveContext];
     [self.tableView reloadData];
 }
 
@@ -91,11 +141,12 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Brewer *brewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    //BrewerEntity *brewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = brewer.name;
     
     //Set detail text label to display hot or cold temp
-    if (brewer.temp == 1)
+    if ([brewer.temp integerValue] == 1)
     {
         cell.detailTextLabel.text = @"Hot Temp";
     }
@@ -103,15 +154,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         cell.detailTextLabel.text = @"Cold Temp";
     }
     
-    
+    cell.imageView.image = [UIImage imageWithData:brewer.imageData];
     //Check if thumbnail is downloaded
-    if (brewer.brewerImage != nil) {
-        cell.imageView.image = brewer.brewerImage;
+    if ([brewer.imageData length] != 0) {
+        cell.imageView.image = [UIImage imageWithData:brewer.imageData];
     }
     //load default image if no imagelink exists
     else {
         NSLog(@"no image");
-        //cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+        [brewer downloadImage];
     }
     
     return cell;
@@ -119,7 +170,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedBrewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    //self.selectedBrewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    self.selectedBrewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"showBrewer" sender:self];
     
     

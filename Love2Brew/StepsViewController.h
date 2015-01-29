@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Brewer.h"
+#import "BrewerEntity.h"
 #import "BrewerTabViewController.h"
 
 @interface StepsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *stepsText;
-@property (strong, nonatomic) Brewer *brewer;
+@property (strong, nonatomic) BrewerEntity *brewer;
 
 
 

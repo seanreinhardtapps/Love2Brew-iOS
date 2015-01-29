@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Brewer.h"
+#import "BrewerEntity.h"
 
 @interface OverviewViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *brewerImage;
 @property (weak, nonatomic) IBOutlet UITextView *overviewText;
-@property (strong, nonatomic) Brewer *brewer;
+@property (strong, nonatomic) BrewerEntity *brewer;
 
 @end

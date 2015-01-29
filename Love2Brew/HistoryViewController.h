@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Brewer.h"
+#import "BrewerEntity.h"
 
 @interface HistoryViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *historyText;
 @property (weak, nonatomic) IBOutlet UITextView *howitworksText;
-@property (strong, nonatomic) Brewer *brewer;
+@property (strong, nonatomic) BrewerEntity *brewer;
 
 
 @end
