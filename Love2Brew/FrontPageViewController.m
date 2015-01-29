@@ -92,6 +92,12 @@
     for (NSDictionary *jsonObj in dataArray)
     {
        
+       
+        dispatch_queue_t queue = dispatch_queue_create("com.sreinhardt.SeanReinhardtApps.Love2Brew", NULL);
+        dispatch_async(queue, ^{
+            
+            
+        
         //Initialize an entity into the core data
         BrewerEntity *brewer = [NSEntityDescription insertNewObjectForEntityForName:@"BrewerEntity"  inManagedObjectContext:coreDataStack.managedObjectContext];
         brewer.name = [jsonObj objectForKey:@"name"];
@@ -105,11 +111,15 @@
         [brewer downloadImage];
         [self.coffeeBrewers addObject:brewer];
         
-        //SAVE
-        [coreDataStack saveContext];
+        dispatch_async(queue, ^{
+            //SAVE
+            [coreDataStack saveContext];
+            [self.tableView reloadData];
+            });
+        });
         
     }
-    [coreDataStack saveContext];
+    //[coreDataStack saveContext];
     [self.tableView reloadData];
 }
 
