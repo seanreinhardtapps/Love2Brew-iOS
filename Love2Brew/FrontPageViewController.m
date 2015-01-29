@@ -8,6 +8,7 @@
 
 #import "FrontPageViewController.h"
 #import "Brewer.h"
+#import "BrewerTabViewController.h"
 
 @interface FrontPageViewController ()
 
@@ -17,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FrontBackground"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
     
      self.serverURL = [NSURL URLWithString:@"http://coffee.sreinhardt.com/api/CoffeeBrewers/"];
 
@@ -63,7 +69,12 @@
     [self.tableView reloadData];
 }
 
-
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor clearColor]];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -108,12 +119,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
- 
-    Brewer *brewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
-    
+    self.selectedBrewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"showBrewer" sender:self];
     
     
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"showBrewer"]){
+        BrewerTabViewController *tabBar = [segue destinationViewController];
+        NSLog(@"Ready to set brewer");
+        tabBar.brewer = self.selectedBrewer;
+        NSLog(@"Done set brewer");
+    }
+}
+
 
 @end

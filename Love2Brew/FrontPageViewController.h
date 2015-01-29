@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Brewer.h"
 
 @interface FrontPageViewController : UITableViewController
 
     @property (nonatomic, strong) NSMutableArray *coffeeBrewers;
 
-@property (strong, nonatomic) NSURL *serverURL;
--(void) downloadBrewers;
+    @property (nonatomic, strong) Brewer *selectedBrewer;
 
--(IBAction)reloadData:(id)sender;
+    @property (strong, nonatomic) NSURL *serverURL;
+    -(void) downloadBrewers;
+
+    -(IBAction)reloadData:(id)sender;
 
 @end

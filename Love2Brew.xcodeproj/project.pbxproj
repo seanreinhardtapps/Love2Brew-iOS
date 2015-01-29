@@ -16,6 +16,10 @@
 		943087751A789E4C00F5A235 /* Love2BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 943087741A789E4C00F5A235 /* Love2BrewTests.m */; };
 		943087801A78A22D00F5A235 /* Brewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430877F1A78A22D00F5A235 /* Brewer.m */; };
 		943087831A78AFC400F5A235 /* FrontPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943087821A78AFC400F5A235 /* FrontPageViewController.m */; };
+		943276761A79D22B0047ADEB /* BrewerTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276751A79D22B0047ADEB /* BrewerTabViewController.m */; };
+		943276791A79D2740047ADEB /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276781A79D2740047ADEB /* OverviewViewController.m */; };
+		9432767C1A79E9BD0047ADEB /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9432767B1A79E9BD0047ADEB /* HistoryViewController.m */; };
+		9432767F1A79EAB30047ADEB /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9432767E1A79EAB30047ADEB /* StepsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,14 @@
 		9430877F1A78A22D00F5A235 /* Brewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brewer.m; sourceTree = "<group>"; };
 		943087811A78AFC400F5A235 /* FrontPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontPageViewController.h; sourceTree = "<group>"; };
 		943087821A78AFC400F5A235 /* FrontPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontPageViewController.m; sourceTree = "<group>"; };
+		943276741A79D22B0047ADEB /* BrewerTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewerTabViewController.h; sourceTree = "<group>"; };
+		943276751A79D22B0047ADEB /* BrewerTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerTabViewController.m; sourceTree = "<group>"; };
+		943276771A79D2740047ADEB /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		943276781A79D2740047ADEB /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
+		9432767A1A79E9BD0047ADEB /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		9432767B1A79E9BD0047ADEB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		9432767D1A79EAB30047ADEB /* StepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsViewController.h; sourceTree = "<group>"; };
+		9432767E1A79EAB30047ADEB /* StepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,14 @@
 				9430877F1A78A22D00F5A235 /* Brewer.m */,
 				943087811A78AFC400F5A235 /* FrontPageViewController.h */,
 				943087821A78AFC400F5A235 /* FrontPageViewController.m */,
+				943276741A79D22B0047ADEB /* BrewerTabViewController.h */,
+				943276751A79D22B0047ADEB /* BrewerTabViewController.m */,
+				943276771A79D2740047ADEB /* OverviewViewController.h */,
+				943276781A79D2740047ADEB /* OverviewViewController.m */,
+				9432767A1A79E9BD0047ADEB /* HistoryViewController.h */,
+				9432767B1A79E9BD0047ADEB /* HistoryViewController.m */,
+				9432767D1A79EAB30047ADEB /* StepsViewController.h */,
+				9432767E1A79EAB30047ADEB /* StepsViewController.m */,
 			);
 			path = Love2Brew;
 			sourceTree = "<group>";
@@ -228,8 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9430875E1A789E4C00F5A235 /* Love2Brew.xcdatamodeld in Sources */,
+				943276791A79D2740047ADEB /* OverviewViewController.m in Sources */,
 				943087831A78AFC400F5A235 /* FrontPageViewController.m in Sources */,
+				9432767F1A79EAB30047ADEB /* StepsViewController.m in Sources */,
+				9432767C1A79E9BD0047ADEB /* HistoryViewController.m in Sources */,
 				9430875B1A789E4C00F5A235 /* AppDelegate.m in Sources */,
+				943276761A79D22B0047ADEB /* BrewerTabViewController.m in Sources */,
 				943087581A789E4B00F5A235 /* main.m in Sources */,
 				943087801A78A22D00F5A235 /* Brewer.m in Sources */,
 			);
@@ -422,6 +446,7 @@
 				9430877A1A789E4C00F5A235 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9430877B1A789E4C00F5A235 /* Build configuration list for PBXNativeTarget "Love2BrewTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +455,7 @@
 				9430877D1A789E4C00F5A235 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
