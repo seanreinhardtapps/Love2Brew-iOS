@@ -106,6 +106,14 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+ 
+    Brewer *brewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
+    
+    
+    
+}
 
 @end
