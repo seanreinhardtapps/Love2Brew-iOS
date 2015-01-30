@@ -96,7 +96,7 @@
        
         dispatch_queue_t queue = dispatch_queue_create("com.sreinhardt.SeanReinhardtApps.Love2Brew", NULL);
         dispatch_async(queue, ^{
-            
+            NSLog(@"Beginning download task");
             
         
         //Initialize an entity into the core data
@@ -111,8 +111,7 @@
         brewer.rating = [jsonObj objectForKey:@"rating"];
         [brewer downloadImage];
         [self.coffeeBrewers addObject:brewer];
-        
-        dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             //SAVE
             [coreDataStack saveContext];
             [self.tableView reloadData];
@@ -121,7 +120,7 @@
         
     }
     //[coreDataStack saveContext];
-    [self.tableView reloadData];
+    //[self.tableView reloadData];
 }
 
 
@@ -152,6 +151,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    //Grab Core Stack
+    BrewerDataStack *coreDataStack = [BrewerDataStack defaultStack];
+    
     //BrewerEntity *brewer = [self.coffeeBrewers objectAtIndex:indexPath.row];
     BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = brewer.name;
@@ -165,7 +167,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         cell.detailTextLabel.text = @"Cold Temp";
     }
     
-    cell.imageView.image = [UIImage imageWithData:brewer.imageData];
     //Check if thumbnail is downloaded
     if ([brewer.imageData length] != 0) {
         cell.imageView.image = [UIImage imageWithData:brewer.imageData];
@@ -174,6 +175,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     else {
         NSLog(@"no image");
         [brewer downloadImage];
+        [coreDataStack saveContext];
     }
     
     return cell;
