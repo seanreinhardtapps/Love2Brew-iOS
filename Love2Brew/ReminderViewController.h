@@ -20,5 +20,6 @@
 
 -(IBAction)cancelClicked:(id)sender;
 
+@property (nonatomic) NSTimeInterval alarmTime;
 
 @end
