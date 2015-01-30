@@ -26,7 +26,7 @@
     self.brewer = tabBar.brewer;
     
     self.stepsText.text = self.brewer.steps;
-    self.navigationController.title = self.brewer.name;
+    self.navigationItem.title = self.brewer.name;
 
 }
 

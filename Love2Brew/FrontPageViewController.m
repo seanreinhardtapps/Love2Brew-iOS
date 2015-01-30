@@ -74,6 +74,7 @@
 
 -(void) downloadBrewers
 {
+    NSLog(@"Beginning download");
     //download JSON Data from server
     NSData *jsonData = [NSData dataWithContentsOfURL:self.serverURL];
     //Declare an error object to catch an error from JSON Derserialization

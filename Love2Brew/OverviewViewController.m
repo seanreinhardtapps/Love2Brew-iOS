@@ -29,7 +29,7 @@
     
     self.brewerImage.image = [UIImage imageWithData:self.brewer.imageData];
     self.overviewText.text = self.brewer.overview;
-    self.navigationController.title = self.brewer.name;
+    self.navigationItem.title = self.brewer.name;
 }
 
 - (void)didReceiveMemoryWarning {

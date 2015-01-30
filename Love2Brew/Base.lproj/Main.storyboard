@@ -34,6 +34,11 @@
                                 <action selector="reloadData:" destination="ghT-mw-Avp" id="VNa-JA-qOG"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reminder" id="ipj-tg-Hrj">
+                            <connections>
+                                <segue destination="8fN-iQ-K7y" kind="presentation" identifier="showAlarm" id="Kl7-hI-dTS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="JTv-62-Pth" kind="show" identifier="showBrewer" id="pKb-H7-e8p"/>
@@ -160,6 +165,110 @@
             </objects>
             <point key="canvasLocation" x="2380" y="2211"/>
         </scene>
+        <!--Reminder View Controller-->
+        <scene sceneID="NgX-Up-wvS">
+            <objects>
+                <viewController id="8fN-iQ-K7y" customClass="ReminderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kJH-k2-Oei"/>
+                        <viewControllerLayoutGuide type="bottom" id="jXU-l4-SAb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7rI-31-Uiu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-Ag-AU1">
+                                <rect key="frame" x="16" y="72" width="568" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-8X-ghF">
+                                <rect key="frame" x="16" y="205" width="284" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="12 Hour Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twelveHourClicked:" destination="8fN-iQ-K7y" eventType="touchUpInside" id="4Fe-7u-6F6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-gf-3KA">
+                                <rect key="frame" x="300" y="205" width="284" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="24 Hour Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twentyfourHourClicked:" destination="8fN-iQ-K7y" eventType="touchUpInside" id="CoJ-u4-p6s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAj-gA-9OL">
+                                <rect key="frame" x="16" y="291" width="284" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="5 Minute Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fiveMinClicked:" destination="8fN-iQ-K7y" eventType="touchUpInside" id="QGH-77-aQb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-5u-Pud">
+                                <rect key="frame" x="300" y="291" width="284" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="90 Second Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ninetySecClicked:" destination="8fN-iQ-K7y" eventType="touchUpInside" id="RNQ-ur-eEa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCa-oJ-7on">
+                                <rect key="frame" x="16" y="516" width="568" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="8fN-iQ-K7y" eventType="touchUpInside" id="TCW-17-Rej"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TabBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9nm-PN-EKJ">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bYk-Ag-AU1" firstAttribute="leading" secondItem="7rI-31-Uiu" secondAttribute="leadingMargin" id="0tD-73-Je9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vPm-5u-Pud" secondAttribute="trailing" id="6Sa-1C-KMa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9nm-PN-EKJ" secondAttribute="trailing" id="72f-Vx-55v"/>
+                            <constraint firstItem="fY3-8X-ghF" firstAttribute="top" secondItem="bYk-Ag-AU1" secondAttribute="bottom" constant="100" id="7Pg-by-TtF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YJH-gf-3KA" secondAttribute="trailing" id="9ZU-R0-0s0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bYk-Ag-AU1" secondAttribute="trailing" id="A6O-gl-Bav"/>
+                            <constraint firstItem="vPm-5u-Pud" firstAttribute="width" secondItem="OAj-gA-9OL" secondAttribute="width" id="DEf-ff-oEJ"/>
+                            <constraint firstItem="bYk-Ag-AU1" firstAttribute="top" secondItem="kJH-k2-Oei" secondAttribute="bottom" constant="52" id="F39-4e-3U8"/>
+                            <constraint firstItem="9nm-PN-EKJ" firstAttribute="leading" secondItem="7rI-31-Uiu" secondAttribute="leadingMargin" id="Hgu-P2-Fza"/>
+                            <constraint firstItem="YJH-gf-3KA" firstAttribute="leading" secondItem="fY3-8X-ghF" secondAttribute="trailing" id="NGf-18-GoE"/>
+                            <constraint firstItem="gCa-oJ-7on" firstAttribute="leading" secondItem="7rI-31-Uiu" secondAttribute="leadingMargin" id="Um7-HC-QNB"/>
+                            <constraint firstItem="jXU-l4-SAb" firstAttribute="top" secondItem="gCa-oJ-7on" secondAttribute="bottom" constant="50" id="Wyr-TQ-acT"/>
+                            <constraint firstItem="OAj-gA-9OL" firstAttribute="top" secondItem="fY3-8X-ghF" secondAttribute="bottom" constant="50" id="Yzc-56-FwB"/>
+                            <constraint firstItem="vPm-5u-Pud" firstAttribute="top" secondItem="YJH-gf-3KA" secondAttribute="bottom" constant="50" id="btI-uL-oHD"/>
+                            <constraint firstItem="OAj-gA-9OL" firstAttribute="leading" secondItem="7rI-31-Uiu" secondAttribute="leadingMargin" id="cua-Vx-p6B"/>
+                            <constraint firstItem="YJH-gf-3KA" firstAttribute="top" secondItem="bYk-Ag-AU1" secondAttribute="bottom" constant="100" id="lzE-PG-aFo"/>
+                            <constraint firstItem="9nm-PN-EKJ" firstAttribute="top" secondItem="7rI-31-Uiu" secondAttribute="topMargin" id="ooS-qP-ALB"/>
+                            <constraint firstItem="jXU-l4-SAb" firstAttribute="top" secondItem="9nm-PN-EKJ" secondAttribute="bottom" id="sfo-OF-E7T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gCa-oJ-7on" secondAttribute="trailing" id="sjy-Ul-exA"/>
+                            <constraint firstItem="vPm-5u-Pud" firstAttribute="leading" secondItem="OAj-gA-9OL" secondAttribute="trailing" id="u4A-KQ-O6p"/>
+                            <constraint firstItem="YJH-gf-3KA" firstAttribute="width" secondItem="fY3-8X-ghF" secondAttribute="width" id="vqF-Be-VTD"/>
+                            <constraint firstItem="fY3-8X-ghF" firstAttribute="leading" secondItem="7rI-31-Uiu" secondAttribute="leadingMargin" id="xe7-mH-FWQ"/>
+                            <constraint firstItem="YJH-gf-3KA" firstAttribute="leading" secondItem="fY3-8X-ghF" secondAttribute="trailing" id="zNh-S6-GE3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIC-cO-eQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="47"/>
+        </scene>
         <!--Overview-->
         <scene sceneID="t2t-Gu-uJc">
             <objects>
@@ -257,4 +366,7 @@
             <point key="canvasLocation" x="516" y="825"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TabBackground" width="238" height="368"/>
+    </resources>
 </document>

@@ -22,6 +22,7 @@
 		9432767F1A79EAB30047ADEB /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9432767E1A79EAB30047ADEB /* StepsViewController.m */; };
 		943276821A79FD280047ADEB /* BrewerDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276811A79FD280047ADEB /* BrewerDataStack.m */; };
 		943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276871A7A04CB0047ADEB /* BrewerEntity.m */; };
+		94441D901A7B27A000B4A292 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94441D8F1A7B27A000B4A292 /* ReminderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		943276811A79FD280047ADEB /* BrewerDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerDataStack.m; sourceTree = "<group>"; };
 		943276861A7A04CB0047ADEB /* BrewerEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewerEntity.h; sourceTree = "<group>"; };
 		943276871A7A04CB0047ADEB /* BrewerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerEntity.m; sourceTree = "<group>"; };
+		94441D8E1A7B27A000B4A292 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		94441D8F1A7B27A000B4A292 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				943276801A79FD280047ADEB /* BrewerDataStack.h */,
 				943276811A79FD280047ADEB /* BrewerDataStack.m */,
 				943087621A789E4C00F5A235 /* Main.storyboard */,
+				94441D8E1A7B27A000B4A292 /* ReminderViewController.h */,
+				94441D8F1A7B27A000B4A292 /* ReminderViewController.m */,
 				943087651A789E4C00F5A235 /* Images.xcassets */,
 				943087671A789E4C00F5A235 /* LaunchScreen.xib */,
 				9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */,
@@ -265,6 +270,7 @@
 				9430875B1A789E4C00F5A235 /* AppDelegate.m in Sources */,
 				943276761A79D22B0047ADEB /* BrewerTabViewController.m in Sources */,
 				943087581A789E4B00F5A235 /* main.m in Sources */,
+				94441D901A7B27A000B4A292 /* ReminderViewController.m in Sources */,
 				943087801A78A22D00F5A235 /* Brewer.m in Sources */,
 				943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */,
 				943276821A79FD280047ADEB /* BrewerDataStack.m in Sources */,

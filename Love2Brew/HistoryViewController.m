@@ -28,7 +28,7 @@
     
     self.historyText.text = self.brewer.history;
     self.howitworksText.text = self.brewer.howItWorks;
-    self.navigationController.title = self.brewer.name;
+    self.navigationItem.title = self.brewer.name;
 }
 
 - (void)didReceiveMemoryWarning {
