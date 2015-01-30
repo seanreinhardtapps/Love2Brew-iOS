@@ -1,6 +1,10 @@
 //
 //  BrewerEntity.h
 //  Love2Brew
+//  SEANREINHARDTAPPS
+//  Hosted at: https://github.com/seanreinhardtapps/Love2Brew-iOS
+//
+//  Brewer Model CoreData Entity
 //
 //  Created by Sean Reinhardt on 1/28/15.
 //  Copyright (c) 2015 Sean Reinhardt. All rights reserved.
@@ -24,7 +28,7 @@
 
 @property (strong, nonatomic)  NSURL *imageLocation;
 
-
+//message to download the objects image
 -(void) downloadImage;
 
 

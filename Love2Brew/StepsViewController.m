@@ -1,6 +1,11 @@
 //
 //  StepsViewController.m
 //  Love2Brew
+//  SEANREINHARDTAPPS
+//  Hosted at: https://github.com/seanreinhardtapps/Love2Brew-iOS
+//
+//  History tab page loads Steps text
+//  Loads background image
 //
 //  Created by Sean Reinhardt on 1/28/15.
 //  Copyright (c) 2015 Sean Reinhardt. All rights reserved.
@@ -17,32 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Load background image
     UIImage *backgroundImage = [UIImage imageNamed:@"FrontBackground"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
     backgroundImageView.image=backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
     
+    //reference to TabBarController hosting tab
     BrewerTabViewController *tabBar = (BrewerTabViewController *)self.tabBarController;
+    //receive brewer object from TabBarController
     self.brewer = tabBar.brewer;
     
+    //load information from object
     self.stepsText.text = self.brewer.steps;
     self.navigationItem.title = self.brewer.name;
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

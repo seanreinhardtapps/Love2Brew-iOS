@@ -1,6 +1,10 @@
 //
 //  BrewerDataStack.h
 //  Love2Brew
+//  SEANREINHARDTAPPS
+//  Hosted at: https://github.com/seanreinhardtapps/Love2Brew-iOS
+//
+//  CoreData stack for Love2Brew application
 //
 //  Created by Sean Reinhardt on 1/28/15.
 //  Copyright (c) 2015 Sean Reinhardt. All rights reserved.
