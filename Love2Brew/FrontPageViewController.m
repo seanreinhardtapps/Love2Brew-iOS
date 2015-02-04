@@ -163,8 +163,16 @@
  */
 -(IBAction)reloadData:(id)sender
 {
-    [self downloadBrewers];
-    [self.tableView reloadData];
+    static dispatch_queue_t queue = 0;
+    if (0 == queue) {
+        queue = dispatch_queue_create("com.sreinhardt.SeanReinhardtApps.Love2Brew", NULL);
+    }
+    dispatch_async(queue, ^{
+        [self downloadBrewers];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    });
 }
 
 #pragma mark - Table view methods
