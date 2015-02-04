@@ -27,7 +27,14 @@
 @dynamic temp;
 @dynamic iD;
 
-//retrieves png image from server for brewer
+
+/**
+ * downloadImageWithQueue andStack
+ * retrieves png image from server for brewer
+ * param - queue: download queue to use
+ * param - stack: reference to CoreData Stack
+ * return - void
+ */
 -(void) downloadImageWithQueue:(dispatch_queue_t)queue andStack:(BrewerDataStack *)coreDataStack
 {
     NSString *location = [NSString stringWithFormat: @"http://coffee.sreinhardt.com/Content/images/image%@.png", self.iD];
@@ -47,6 +54,12 @@
 }
 
 
+/**
+ * fillBrewerWithJSON
+ * uses JSON object (NSDictionary) to load properties of Brewer Model
+ * param - jsonObj: NSDictionary
+ * return - void
+ */
 -(void)fillBrewerWithJSON:(NSDictionary *)jsonObj
 {
     //Load fields into object

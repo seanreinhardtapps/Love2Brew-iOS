@@ -23,6 +23,7 @@
 		943276821A79FD280047ADEB /* BrewerDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276811A79FD280047ADEB /* BrewerDataStack.m */; };
 		943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276871A7A04CB0047ADEB /* BrewerEntity.m */; };
 		94441D901A7B27A000B4A292 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94441D8F1A7B27A000B4A292 /* ReminderViewController.m */; };
+		9444BFB11A82D2BD00C6063F /* BrewerEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444BFB01A82D2BD00C6063F /* BrewerEntityTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		943276871A7A04CB0047ADEB /* BrewerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerEntity.m; sourceTree = "<group>"; };
 		94441D8E1A7B27A000B4A292 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
 		94441D8F1A7B27A000B4A292 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
+		9444BFB01A82D2BD00C6063F /* BrewerEntityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerEntityTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				943087741A789E4C00F5A235 /* Love2BrewTests.m */,
+				9444BFB01A82D2BD00C6063F /* BrewerEntityTests.m */,
 				943087721A789E4C00F5A235 /* Supporting Files */,
 			);
 			path = Love2BrewTests;
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943087751A789E4C00F5A235 /* Love2BrewTests.m in Sources */,
+				9444BFB11A82D2BD00C6063F /* BrewerEntityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
