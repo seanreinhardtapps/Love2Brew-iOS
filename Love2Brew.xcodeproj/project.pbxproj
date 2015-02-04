@@ -107,6 +107,9 @@
 		943087541A789E4B00F5A235 /* Love2Brew */ = {
 			isa = PBXGroup;
 			children = (
+				9444BFAC1A7F5DE400C6063F /* Controllers */,
+				9444BFAB1A7F5DDC00C6063F /* Views */,
+				9444BFAA1A7F5DCC00C6063F /* Models */,
 				943087591A789E4B00F5A235 /* AppDelegate.h */,
 				9430875A1A789E4C00F5A235 /* AppDelegate.m */,
 				943276801A79FD280047ADEB /* BrewerDataStack.h */,
@@ -116,22 +119,6 @@
 				943087671A789E4C00F5A235 /* LaunchScreen.xib */,
 				9430875C1A789E4C00F5A235 /* Love2Brew.xcdatamodeld */,
 				943087551A789E4B00F5A235 /* Supporting Files */,
-				9430877E1A78A22D00F5A235 /* Brewer.h */,
-				9430877F1A78A22D00F5A235 /* Brewer.m */,
-				943276861A7A04CB0047ADEB /* BrewerEntity.h */,
-				943276871A7A04CB0047ADEB /* BrewerEntity.m */,
-				94441D8E1A7B27A000B4A292 /* ReminderViewController.h */,
-				94441D8F1A7B27A000B4A292 /* ReminderViewController.m */,
-				943087811A78AFC400F5A235 /* FrontPageViewController.h */,
-				943087821A78AFC400F5A235 /* FrontPageViewController.m */,
-				943276741A79D22B0047ADEB /* BrewerTabViewController.h */,
-				943276751A79D22B0047ADEB /* BrewerTabViewController.m */,
-				943276771A79D2740047ADEB /* OverviewViewController.h */,
-				943276781A79D2740047ADEB /* OverviewViewController.m */,
-				9432767A1A79E9BD0047ADEB /* HistoryViewController.h */,
-				9432767B1A79E9BD0047ADEB /* HistoryViewController.m */,
-				9432767D1A79EAB30047ADEB /* StepsViewController.h */,
-				9432767E1A79EAB30047ADEB /* StepsViewController.m */,
 			);
 			path = Love2Brew;
 			sourceTree = "<group>";
@@ -160,6 +147,43 @@
 				943087731A789E4C00F5A235 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9444BFAA1A7F5DCC00C6063F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9430877E1A78A22D00F5A235 /* Brewer.h */,
+				9430877F1A78A22D00F5A235 /* Brewer.m */,
+				943276861A7A04CB0047ADEB /* BrewerEntity.h */,
+				943276871A7A04CB0047ADEB /* BrewerEntity.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9444BFAB1A7F5DDC00C6063F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9444BFAC1A7F5DE400C6063F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94441D8E1A7B27A000B4A292 /* ReminderViewController.h */,
+				94441D8F1A7B27A000B4A292 /* ReminderViewController.m */,
+				943087811A78AFC400F5A235 /* FrontPageViewController.h */,
+				943087821A78AFC400F5A235 /* FrontPageViewController.m */,
+				943276741A79D22B0047ADEB /* BrewerTabViewController.h */,
+				943276751A79D22B0047ADEB /* BrewerTabViewController.m */,
+				943276771A79D2740047ADEB /* OverviewViewController.h */,
+				943276781A79D2740047ADEB /* OverviewViewController.m */,
+				9432767A1A79E9BD0047ADEB /* HistoryViewController.h */,
+				9432767B1A79E9BD0047ADEB /* HistoryViewController.m */,
+				9432767D1A79EAB30047ADEB /* StepsViewController.h */,
+				9432767E1A79EAB30047ADEB /* StepsViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

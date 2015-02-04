@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BrewerDataStack.h"
 
 
 @interface BrewerEntity : NSManagedObject
@@ -29,7 +30,8 @@
 @property (strong, nonatomic)  NSURL *imageLocation;
 
 //message to download the objects image
--(void) downloadImage;
+-(void) downloadImageWithQueue:(dispatch_queue_t)queue andStack:(BrewerDataStack *)coreDataStack;
 
+-(void)fillBrewerWithJSON:(NSDictionary *)jsonObj;
 
 @end

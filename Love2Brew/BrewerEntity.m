@@ -28,13 +28,36 @@
 @dynamic iD;
 
 //retrieves png image from server for brewer
--(void) downloadImage
+-(void) downloadImageWithQueue:(dispatch_queue_t)queue andStack:(BrewerDataStack *)coreDataStack
 {
     NSString *location = [NSString stringWithFormat: @"http://coffee.sreinhardt.com/Content/images/image%@.png", self.iD];
     //creates URL from string above
     self.imageLocation = [NSURL URLWithString:location];
     //perform download
+    //open an async task
+    dispatch_async(queue, ^{
     self.imageData = [NSData dataWithContentsOfURL:self.imageLocation];
+        //callback thread - once download completed
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //SAVE
+            NSLog(@"Download complete for image %@", self.name);
+            [coreDataStack saveContext];
+        });
+    });
 }
 
+
+-(void)fillBrewerWithJSON:(NSDictionary *)jsonObj
+{
+    //Load fields into object
+    self.name = [jsonObj objectForKey:@"name"];
+    self.iD = [jsonObj objectForKey:@"id"];
+    self.temp = [jsonObj objectForKey:@"temp"];
+    self.overview = [jsonObj objectForKey:@"overview"];
+    self.history = [jsonObj objectForKey:@"history"];
+    self.steps = [jsonObj objectForKey:@"steps"];
+    self.howItWorks = [jsonObj objectForKey:@"howItWorks"];
+    self.rating = [jsonObj objectForKey:@"rating"];
+
+}
 @end

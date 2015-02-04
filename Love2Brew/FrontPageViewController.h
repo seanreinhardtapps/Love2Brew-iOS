@@ -23,9 +23,6 @@
     //handler to retrieve stored coffee brewer data
     @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-    //List of brewers - loaded from data stack
-    @property (nonatomic, strong) NSMutableArray *coffeeBrewers;
-
     //Property - Brewer object that will be sent to TabBarController
     @property (nonatomic, strong) BrewerEntity *selectedBrewer;
 
