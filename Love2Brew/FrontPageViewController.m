@@ -20,6 +20,7 @@
 #import "BrewerTabViewController.h"
 #import "BrewerEntity.h"
 #import "BrewerDataStack.h"
+#import "BrewerTableViewCell.h"
 
 @interface FrontPageViewController ()
 
@@ -223,28 +224,22 @@
  * param: indexPath: location in tableView
  * return: UITableViewCell - configured cell
  */
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (BrewerTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    BrewerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     //locate Brewer associated with cell
     BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    //Set Contents
-    cell.textLabel.text = brewer.name;
+    [cell configureCellForBrewer:brewer];
     
-    if ([brewer.temp integerValue] == 1)
-    {
-        cell.detailTextLabel.text = @"Hot Temp";
-    }
-    else {
-        cell.detailTextLabel.text = @"Cold Temp";
-    }
+    //Set Contents
+    //cell.textLabel.text = brewer.name;
     
     //Check if thumbnail is downloaded
-    if ([brewer.imageData length] != 0) {
-        cell.imageView.image = [UIImage imageWithData:brewer.imageData];
-    }
+    //if ([brewer.imageData length] != 0) {
+      //  cell.imageView.image = [UIImage imageWithData:brewer.imageData];
+    //}
     
     return cell;
 }

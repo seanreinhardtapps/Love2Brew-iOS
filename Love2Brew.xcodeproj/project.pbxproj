@@ -24,6 +24,7 @@
 		943276881A7A04CB0047ADEB /* BrewerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 943276871A7A04CB0047ADEB /* BrewerEntity.m */; };
 		94441D901A7B27A000B4A292 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94441D8F1A7B27A000B4A292 /* ReminderViewController.m */; };
 		9444BFB11A82D2BD00C6063F /* BrewerEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444BFB01A82D2BD00C6063F /* BrewerEntityTests.m */; };
+		9444BFB41A82DCA000C6063F /* BrewerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444BFB31A82DCA000C6063F /* BrewerTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		94441D8E1A7B27A000B4A292 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
 		94441D8F1A7B27A000B4A292 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 		9444BFB01A82D2BD00C6063F /* BrewerEntityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerEntityTests.m; sourceTree = "<group>"; };
+		9444BFB21A82DCA000C6063F /* BrewerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewerTableViewCell.h; sourceTree = "<group>"; };
+		9444BFB31A82DCA000C6063F /* BrewerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewerTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 		9444BFAB1A7F5DDC00C6063F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9444BFB21A82DCA000C6063F /* BrewerTableViewCell.h */,
+				9444BFB31A82DCA000C6063F /* BrewerTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			files = (
 				9430875E1A789E4C00F5A235 /* Love2Brew.xcdatamodeld in Sources */,
 				943276791A79D2740047ADEB /* OverviewViewController.m in Sources */,
+				9444BFB41A82DCA000C6063F /* BrewerTableViewCell.m in Sources */,
 				943087831A78AFC400F5A235 /* FrontPageViewController.m in Sources */,
 				9432767F1A79EAB30047ADEB /* StepsViewController.m in Sources */,
 				9432767C1A79E9BD0047ADEB /* HistoryViewController.m in Sources */,
