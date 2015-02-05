@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *brewerTempLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *brewerImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *tempImageView;
+//@property (weak, nonatomic) IBOutlet UIImageView *tempImageView;
 
 @end
 
@@ -32,12 +32,13 @@
     if ([brewer.temp integerValue] == 1)
     {
         self.brewerTempLabel.text = @"Hot Temp";
-        
-        self.tempImageView.image = [UIImage imageWithData:brewer.imageData];
+        self.brewerTempLabel.textColor = [UIColor redColor];
+        //self.tempImageView.image = [UIImage imageNamed:@"hotCup"];
     }
     else {
         self.brewerTempLabel.text = @"Cold Temp";
-        self.tempImageView.image = [UIImage imageWithData:brewer.imageData];
+        self.brewerTempLabel.textColor = [UIColor blueColor];
+        //self.tempImageView.image = [UIImage imageNamed:@"coldCup"];
 
     }
     
