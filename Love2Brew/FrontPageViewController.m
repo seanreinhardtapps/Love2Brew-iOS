@@ -28,6 +28,8 @@
 
 @implementation FrontPageViewController
 
+NSArray *searchResults;
+
 /**
  * viewDidLoad
  * set background
@@ -230,16 +232,12 @@
     
     //locate Brewer associated with cell
     BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+    if (cell == nil) {
+        cell = [[BrewerTableViewCell alloc] init];
+    }
     [cell configureCellForBrewer:brewer];
     
-    //Set Contents
-    //cell.textLabel.text = brewer.name;
     
-    //Check if thumbnail is downloaded
-    //if ([brewer.imageData length] != 0) {
-      //  cell.imageView.image = [UIImage imageWithData:brewer.imageData];
-    //}
     
     return cell;
 }
@@ -291,5 +289,13 @@
     }
 }
 
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF contains[cd] %@",
+                                    searchText];
+    
+    //searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+}
 
 @end

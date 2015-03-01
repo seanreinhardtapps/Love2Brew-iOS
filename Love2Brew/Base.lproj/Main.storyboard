@@ -9,13 +9,21 @@
         <!--Love 2 Brew-->
         <scene sceneID="nTR-5A-79U">
             <objects>
-                <tableViewController id="ghT-mw-Avp" customClass="FrontPageViewController" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="Cell" id="ghT-mw-Avp" customClass="FrontPageViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ysc-3r-BHI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="eR6-Ia-q4x">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ghT-mw-Avp" id="eZ1-kh-lp5"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="94" id="jJm-0P-tv3" customClass="BrewerTableViewCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="94" id="jJm-0P-tv3" customClass="BrewerTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJm-0P-tv3" id="kKS-fc-XTu">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -87,10 +95,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchDisplayController" destination="gfy-wx-2Lc" id="G57-hI-cqe"/>
                         <segue destination="JTv-62-Pth" kind="show" identifier="showBrewer" id="pKb-H7-e8p"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEB-El-OsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController searchResultsTitle="Cell" id="gfy-wx-2Lc">
+                    <connections>
+                        <outlet property="delegate" destination="ghT-mw-Avp" id="YrG-jb-DDm"/>
+                        <outlet property="searchBar" destination="eR6-Ia-q4x" id="cHM-xK-70T"/>
+                        <outlet property="searchContentsController" destination="ghT-mw-Avp" id="h08-Vo-BZ7"/>
+                        <outlet property="searchResultsDataSource" destination="ghT-mw-Avp" id="e3Y-fH-F3u"/>
+                        <outlet property="searchResultsDelegate" destination="ghT-mw-Avp" id="LI8-Fy-bGF"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1400" y="807"/>
         </scene>
