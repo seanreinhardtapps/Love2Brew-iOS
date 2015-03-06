@@ -215,9 +215,26 @@ NSArray *searchResults;
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.fetchedResultsController.fetchedObjects count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+        
+    } else {
+        return [self.fetchedResultsController.fetchedObjects count];
+    }
+    
 }
 
+
+/**
+ * heightForRowAtIndexPath
+ * returns height of each cell
+ * param: indexPath: location in tableView
+ * return: CGFloat - cell height (94)
+ */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 94;
+}
 
 /**
  * numberOfRowsInSection
@@ -228,10 +245,19 @@ NSArray *searchResults;
  */
 - (BrewerTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BrewerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    BrewerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     //locate Brewer associated with cell
-    BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    //BrewerEntity *brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Display recipe in the table cell
+    BrewerEntity *brewer = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        brewer = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        brewer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
     if (cell == nil) {
         cell = [[BrewerTableViewCell alloc] init];
     }
@@ -291,11 +317,29 @@ NSArray *searchResults;
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
+    NSArray *objects = [self.fetchedResultsController fetchedObjects];
     NSPredicate *resultPredicate = [NSPredicate
                                     predicateWithFormat:@"SELF contains[cd] %@",
                                     searchText];
     
-    //searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+    searchResults = [objects filteredArrayUsingPredicate:resultPredicate];
+}
+
+/**
+ * searchDisplayController:shouldReloadTableForSearchString:
+ * delegate method called when search bar text changes
+ * param: controller: controller context for search bar
+ * param: searchString: current text in search bar
+ * return: BOOL
+ */
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
 }
 
 @end
